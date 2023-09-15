@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Animal, AnimalService } from '../../services/animal.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-selection',
@@ -8,6 +9,8 @@ import { Animal, AnimalService } from '../../services/animal.service';
 })
 export class SelectionComponent {
     readonly Animal = Animal;
+
+    selectedAnimal$: Observable<Animal | undefined> = this.animalService.getSelectedAnimal();
 
     constructor(private animalService: AnimalService) {}
 

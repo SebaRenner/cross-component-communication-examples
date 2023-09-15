@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 export enum Animal {
   Giraffe,
@@ -10,13 +11,17 @@ export enum Animal {
   providedIn: 'root'
 })
 export class AnimalService {
-    private _selectedAnimal?: Animal
+    private _selectedAnimal: BehaviorSubject<Animal | undefined> = new BehaviorSubject<Animal | undefined>(undefined);
+
+    getSelectedAnimal(): Observable<Animal | undefined> {
+      return this._selectedAnimal.asObservable();
+    }
 
     setSelectedAnimal(animal: Animal) {
-      this._selectedAnimal = animal;
+      this._selectedAnimal.next(animal);
     }
 
     resetSelection() {
-      this._selectedAnimal = undefined;
+      this._selectedAnimal.next(undefined);
     }
 }

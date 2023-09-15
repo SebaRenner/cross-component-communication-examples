@@ -1,6 +1,5 @@
 div {
   display: flex;
-  border: 1px solid red;
   height: 100vh
 }
 
@@ -10,6 +9,6 @@ app-selection {
 }
 
 app-display {
-  border: 1px solid green;
+  border: 1px solid red;
   width: 80%;
 }

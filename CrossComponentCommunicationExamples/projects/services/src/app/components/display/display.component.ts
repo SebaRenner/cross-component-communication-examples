@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Animal, AnimalService } from '../../services/animal.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-display',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent {
+    protected Animal = Animal;
 
+    selectedAnimal$: Observable<Animal | undefined> = this.animalService.getSelectedAnimal();
+
+    constructor(private animalService: AnimalService) {}
+
+    onReset() {
+      this.animalService.resetSelection();
+    }
 }

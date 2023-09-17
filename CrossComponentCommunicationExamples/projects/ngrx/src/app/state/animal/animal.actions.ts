@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { Animal } from "../../model/animal.model";
+import { Animal } from "../../models/animal.model";
 
 export const setAnimal = createAction('[Animal] set', props<{ animal: Animal }>());
 

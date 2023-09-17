@@ -1,6 +1,6 @@
 import { Action, createReducer, on } from "@ngrx/store"
 import { setAnimal, resetAnimal } from "./animal.actions"
-import { Animal } from "../../model/animal.model"
+import { Animal } from "../../models/animal.model"
 
 export interface AnimalState {
   selectedAnimal?: Animal;

@@ -1,1 +1,22 @@
-<p>selection works!</p>
+<div>
+  <h3>Select an animal</h3>
+  <button
+      type="button"
+      class="btn btn-primary"
+      (click)="onClick(Animal.Giraffe)"
+      [ngClass]="{ 'selected':  (selectedAnimal$ | async) === Animal.Giraffe}"
+  ><span>Giraffe</span></button>
+  <button
+      type="button"
+      class="btn btn-primary"
+      (click)="onClick(Animal.Monkey)"
+      [ngClass]="{ 'selected':  (selectedAnimal$ | async) === Animal.Monkey}"
+  >Monkey</button>
+  <button
+      type="button"
+      class="btn btn-primary"
+      (click)="onClick(Animal.Donkey)"
+      [ngClass]="{ 'selected':  (selectedAnimal$ | async) === Animal.Donkey}"
+  >Donkey</button>
+</div>
+

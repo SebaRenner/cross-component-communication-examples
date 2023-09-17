@@ -6,10 +6,12 @@ export interface AnimalState {
   selectedAnimal?: Animal;
 }
 
-export const initialAnimalState: AnimalState = {}
+export const initialAnimalState: AnimalState = {
+  selectedAnimal: undefined
+}
 
 export const animalReducer = createReducer<AnimalState, Action>(
   initialAnimalState,
-  on(setAnimal, (state, { animal }) => ({ ...state, animal })),
-  on(resetAnimal, (state) => ({ ...state, undefined })
+  on(setAnimal, (state, { animal }) => ({ selectedAnimal: animal })),
+  on(resetAnimal, (state) => ({ selectedAnimal: undefined })
 ));

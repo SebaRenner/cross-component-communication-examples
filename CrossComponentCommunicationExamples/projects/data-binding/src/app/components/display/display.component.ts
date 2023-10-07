@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Animal } from '../../models/animal.model';
-import { selectedAnimal } from '../../store/state';
 
 @Component({
   selector: 'app-display',
@@ -9,9 +8,10 @@ import { selectedAnimal } from '../../store/state';
 })
 export class DisplayComponent {
   readonly Animal = Animal;
-  readonly selectedAnimal = selectedAnimal;
+  @Input() selectedAnimal?: Animal;
+  @Output() selectedAnimalChange = new EventEmitter<Animal | undefined>();
 
   onReset() {
-    selectedAnimal.set(undefined);
+    this.selectedAnimalChange.emit(undefined);
   }
 }

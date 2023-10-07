@@ -8,8 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent {
-    protected Animal = Animal;
-
+    readonly Animal = Animal;
     selectedAnimal$: Observable<Animal | undefined> = this.animalService.getSelectedAnimal();
 
     constructor(private animalService: AnimalService) {}

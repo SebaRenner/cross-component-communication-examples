@@ -11,8 +11,7 @@ import { resetAnimal } from '../../state/animal/animal.actions';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent {
-  protected Animal = Animal;
-
+  readonly Animal = Animal;
   selectedAnimal$: Observable<Animal | undefined> = this.store.select(selectAnimal);
 
   constructor(private store: Store) {}

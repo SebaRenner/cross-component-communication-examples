@@ -1,0 +1,14 @@
+div {
+  display: flex;
+  height: 100vh
+}
+
+app-selection {
+  border: 1px solid blue;
+  width: 20%;
+}
+
+app-display {
+  border: 1px solid red;
+  width: 80%;
+}

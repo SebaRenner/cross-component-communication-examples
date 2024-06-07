@@ -11,10 +11,10 @@ But what if two components need to communicate with each other who don't have a 
 Angular offers different ways on how this can be achieved.
 
 ## Options
-1. [Services](/CrossComponentCommunicationExamples/projects/services/src/app)
-2. [Signals](/CrossComponentCommunicationExamples/projects/signals/src/app)
-3. [NgRx](/CrossComponentCommunicationExamples/projects/ngrx/src/app)
-4. [Data Binding via common parent](/CrossComponentCommunicationExamples/projects/data-binding/src/app) *
+1. [Services](/projects/services/src/app)
+2. [Signals](/projects/signals/src/app)
+3. [NgRx](/projects/ngrx/src/app)
+4. [Data Binding via common parent](/projects/data-binding/src/app) *
 
 \* Whilst it is possible to handle cross component communication via a common parent component I would only recommend it if the components share the same direct parent. Depending on your component hierarchy the shared parent component might be 4 levels up, which means you'd have to pass the data through all levels to enable communication between those components. 
 

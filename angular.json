@@ -121,6 +121,7 @@
               "projects/signals/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "projects/signals/src/styles.css"
             ],
             "scripts": [],
@@ -216,6 +217,7 @@
               "projects/ngrx/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "projects/ngrx/src/styles.css"
             ],
             "scripts": [],
@@ -311,6 +313,7 @@
               "projects/data-binding/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "projects/data-binding/src/styles.css"
             ],
             "scripts": [],

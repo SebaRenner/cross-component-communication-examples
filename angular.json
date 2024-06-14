@@ -11,11 +11,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/services",
+            "outputPath": {
+              "base": "dist/services"
+            },
             "index": "projects/services/src/index.html",
-            "main": "projects/services/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -31,7 +32,8 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            ],
+            "browser": "projects/services/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -50,9 +52,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -106,11 +106,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/signals",
+            "outputPath": {
+              "base": "dist/signals"
+            },
             "index": "projects/signals/src/index.html",
-            "main": "projects/signals/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -122,7 +123,8 @@
             "styles": [
               "projects/signals/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/signals/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -141,9 +143,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -201,11 +201,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngrx",
+            "outputPath": {
+              "base": "dist/ngrx"
+            },
             "index": "projects/ngrx/src/index.html",
-            "main": "projects/ngrx/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -217,7 +218,8 @@
             "styles": [
               "projects/ngrx/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/ngrx/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -236,9 +238,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -296,11 +296,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/data-binding",
+            "outputPath": {
+              "base": "dist/data-binding"
+            },
             "index": "projects/data-binding/src/index.html",
-            "main": "projects/data-binding/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -312,7 +313,8 @@
             "styles": [
               "projects/data-binding/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/data-binding/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -331,9 +333,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true

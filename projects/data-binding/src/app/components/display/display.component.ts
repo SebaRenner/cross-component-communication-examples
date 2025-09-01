@@ -4,8 +4,7 @@ import { Animal } from '../../models/animal.model';
 @Component({
     selector: 'app-display',
     templateUrl: './display.component.html',
-    styleUrls: ['./display.component.css'],
-    standalone: false
+    styleUrls: ['./display.component.css']
 })
 export class DisplayComponent {
   readonly Animal = Animal;

@@ -4,12 +4,13 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectAnimal } from '../../state/animal/animal.selectors';
 import { resetAnimal } from '../../state/animal/animal.actions';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-display',
     templateUrl: './display.component.html',
     styleUrls: ['./display.component.css'],
-    standalone: false
+    imports: [AsyncPipe]
 })
 export class DisplayComponent {
   readonly Animal = Animal;

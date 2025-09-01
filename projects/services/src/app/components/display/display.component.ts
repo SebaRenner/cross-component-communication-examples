@@ -3,9 +3,10 @@ import { Animal, AnimalService } from '../../services/animal.service';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-display',
-  templateUrl: './display.component.html',
-  styleUrls: ['./display.component.css']
+    selector: 'app-display',
+    templateUrl: './display.component.html',
+    styleUrls: ['./display.component.css'],
+    standalone: false
 })
 export class DisplayComponent {
     readonly Animal = Animal;

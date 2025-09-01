@@ -6,9 +6,10 @@ import { selectAnimal } from '../../state/animal/animal.selectors';
 import { setAnimal } from '../../state/animal/animal.actions';
 
 @Component({
-  selector: 'app-selection',
-  templateUrl: './selection.component.html',
-  styleUrls: ['./selection.component.css']
+    selector: 'app-selection',
+    templateUrl: './selection.component.html',
+    styleUrls: ['./selection.component.css'],
+    standalone: false
 })
 export class SelectionComponent {
   readonly Animal = Animal;

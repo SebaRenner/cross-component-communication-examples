@@ -4,13 +4,13 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectAnimal } from '../../state/animal/animal.selectors';
 import { setAnimal } from '../../state/animal/animal.actions';
-import { NgClass, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-selection',
     templateUrl: './selection.component.html',
     styleUrls: ['./selection.component.css'],
-    imports: [NgClass, AsyncPipe]
+    imports: [AsyncPipe]
 })
 export class SelectionComponent {
   readonly Animal = Animal;

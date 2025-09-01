@@ -1,12 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Animal } from '../../models/animal.model';
-import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-selection',
     templateUrl: './selection.component.html',
-    styleUrls: ['./selection.component.css'],
-    imports: [NgClass]
+    styleUrls: ['./selection.component.css']
 })
 export class SelectionComponent {
     readonly Animal = Animal;
